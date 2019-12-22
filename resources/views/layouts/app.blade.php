@@ -33,7 +33,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                    <li><a href="{{url('/home')}}">Home</a></li> &nbsp
+                    <li><a href="{{url('/post')}}">Add post</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -49,11 +50,17 @@
                                 </li>
                             @endif
                         @else
+                       
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
+                            <ul class ="dropdown-menu" role="menu">
+                            <li><a href="{{url('/profile')}}">Profile</a></li>&nbsp
+                        <li><a href="{{url('/category')}}">category</a></li>
+                        <li>
+                        !--
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
